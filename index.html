@@ -1,0 +1,35 @@
+<html>
+    <head>
+<title>Family Book
+</title>
+    </head>
+    <body>
+<img src="http://www.digitalmesh.com/blog/wp-content/uploads/2020/05/404-error.jpg" style="width: 30%; height:30%;" id="family_member_image">
+<h4 id="family_member_name"></h4>
+<button onclick="update();">Next</button>
+
+<script>
+    var images = ["http://www.digitalmesh.com/blog/wp-content/uploads/2020/05/404-error.jpg","https://images.unsplash.com/photo-1556103255-4443dbae8e5a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvdG9ncmFwaGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80","http://www.digitalmesh.com/blog/wp-content/uploads/2020/05/404-error.jpg","http://www.digitalmesh.com/blog/wp-content/uploads/2020/05/404-error.jpg"];
+    var names = ["Hrithik Singh", "Sandeep Singh", "Amir Singh", "Atharv Singh"];
+
+    var i = 0;
+    function update()
+    {
+        i++;
+        var numbers_of_family_member_in_array = 4;
+        if(i >= numbers_of_family_member_in_array )
+        {
+            i=0;
+        };
+        var updatedImage = images[i];
+    
+        var updatedName = names[i];
+        document.getElementById("family_member_image").src = updatedImage;
+        
+        document.getElementById("family_member_name").innerHTML = updatedName;
+    }
+</script>
+
+    </body>
+    
+</html>
